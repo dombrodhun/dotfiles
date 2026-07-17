@@ -1,0 +1,40 @@
+# OS-spezifische Dateien
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs und Editoren
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# KI-Agenten & CLI Tooling Caches/Logs
+.agent/
+.agents/
+.gemini/
+antigravity.log
+*agent*.log
+
+# Logs und Laufzeitdaten
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Typische Build-Ordner und Cache (als globale Absicherung)
+node_modules/
+.npm/
+__pycache__/
+*.pyc
+.pytest_cache/
+.sass-cache/
+.eslintcache

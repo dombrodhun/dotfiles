@@ -1,0 +1,18 @@
+# Gemeinsame Aliase für Bash und Zsh
+
+# eza statt ls
+if command -v eza >/dev/null 2>&1; then
+    alias ls="eza -l -a --git"
+else
+    alias ls="ls -la --color=auto"
+fi
+
+# bat statt cat
+if command -v bat >/dev/null 2>&1; then
+    alias cat="bat"
+fi
+
+# fd statt find
+if command -v fd >/dev/null 2>&1; then
+    alias find="fd"
+fi
