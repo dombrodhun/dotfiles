@@ -1,0 +1,8 @@
+# Gemeinsame Umgebungsvariablen für Bash und Zsh
+
+# Pfade exportieren
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
+
+# Standard-Editor
+export EDITOR="nvim"
+export VISUAL="nvim"

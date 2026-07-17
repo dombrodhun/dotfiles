@@ -1,0 +1,25 @@
+# .zshrc
+
+# Gemeinsame Umgebung laden
+if [ -f ~/.shell_env ]; then
+    . ~/.shell_env
+fi
+
+# Gemeinsame Aliase laden
+if [ -f ~/.shell_aliases ]; then
+    . ~/.shell_aliases
+fi
+
+# Starship Prompt initialisieren
+if command -v starship >/dev/null 2>&1; then
+    eval "$(starship init zsh)"
+fi
+
+# Zsh Plugins laden (falls vorhanden)
+[ -f ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Zoxide (replacing cd)
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init zsh --cmd z)"
+fi
