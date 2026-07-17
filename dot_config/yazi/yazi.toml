@@ -1,0 +1,15 @@
+[mgr]
+ratio = [ 1, 3, 6 ] # Parent: 10%, Current: 30%, Preview/Vorschau: 60%
+show_hidden = true
+show_symlink = true
+
+[opener]
+edit = [
+	{ run = '${EDITOR:-vi} "$@"', block = true, for = "unix" }
+]
+
+[open]
+rules = [
+	{ name = "*.txt", use = "edit" },
+	{ mime = "text/*", use = "edit" }
+]
