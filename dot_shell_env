@@ -6,3 +6,9 @@ export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
 # Standard-Editor
 export EDITOR="nvim"
 export VISUAL="nvim"
+
+# Bitwarden CLI Umgebungsvariablen laden, falls vorhanden
+if [ -f "$HOME/.bw_secrets" ]; then
+    source "$HOME/.bw_secrets"
+fi
+
