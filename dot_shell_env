@@ -7,8 +7,5 @@ export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-# Bitwarden CLI Umgebungsvariablen laden, falls vorhanden
-if [ -f "$HOME/.bw_secrets" ]; then
-    source "$HOME/.bw_secrets"
-fi
-
+# Bitwarden Flatpak SSH Agent Socket
+export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"

@@ -17,17 +17,3 @@ if command -v fd >/dev/null 2>&1; then
     alias find="fd"
 fi
 
-# Bitwarden CLI Helfer
-bw-unlock() {
-    export BW_SESSION=$(bw unlock --raw)
-    echo "Bitwarden entsperrt! Session-Key geladen."
-}
-
-# Lade privaten ssh key
-ssh-load-bw() {
-    if [ -z "$BW_SESSION" ]; then
-        export BW_SESSION=$(bw unlock --raw)
-    fi
-    local key_id="${1:-43472dbe-f1d3-49b2-bf7e-b4850069cc7b}"
-    bw get item "$key_id" | jq -r '.sshKey.privateKey' | ssh-add -
-}
