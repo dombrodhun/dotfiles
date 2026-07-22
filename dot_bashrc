@@ -25,6 +25,12 @@ if command -v starship >/dev/null 2>&1; then
     eval "$(starship init bash)"
 fi
 
+# Mise (Multi-Runtime Manager)
+if command -v mise >/dev/null 2>&1; then
+    eval "$(mise activate bash)"
+fi
+
+
 # Benutzerdefinierte Aliase/Funktionen aus Verzeichnis laden
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do

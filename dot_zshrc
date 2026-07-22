@@ -23,3 +23,9 @@ fi
 if command -v zoxide >/dev/null 2>&1; then
     eval "$(zoxide init zsh --cmd z)"
 fi
+
+# Mise (Multi-Runtime Manager)
+if command -v mise >/dev/null 2>&1; then
+    eval "$(mise activate zsh)"
+fi
+
