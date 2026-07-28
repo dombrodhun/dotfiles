@@ -1,4 +1,4 @@
- # Global AI Instructions for Antigravity
+# Global AI Instructions
 
 This file defines the global development standards, architectural preferences, and interaction workflows for all tasks. Project-specific instructions will override these rules.
 
@@ -32,3 +32,9 @@ This file defines the global development standards, architectural preferences, a
 * **Destructive Actions:** Always ask for explicit user confirmation before executing potentially destructive commands (e.g., `rm -rf` on non-empty directories, force-pushing to git, dropping databases).
 * **File Modifications:** You are allowed to create or modify code files directly within the workspace. However, provide a brief, bulleted summary of the modified files and the reasoning behind the changes in your response.
 * **Clarification over Assumptions:** If requirements or assignments are vague, stop and ask clarifying questions before generating code to avoid unnecessary iterations.
+
+## 6. Git & GitHub Workflow
+* **Commit Standards:** Use clear, precise Conventional Commits syntax (`feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`). Keep commits atomic and focused on single logical changes.
+* **Branch Strategy:** Work on isolated feature or fix branches. Never commit directly to `main` or `master` without explicit permission.
+* **Repository Safety:** Check `.gitignore` rules before staging files. Never commit build artifacts, temporary files, local environment configurations (`.env`), or secrets.
+* **PR & Review Guidelines:** Create concise Pull Request descriptions summarizing changes, tested edge cases, and breaking changes.
