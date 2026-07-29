@@ -6,6 +6,8 @@ Diese Datei enthält die geplante Übersicht und Beschreibungen für nützliche 
 
 ## 1. Bereits existierende Skills
 
+* **`web-researcher`** ([SKILL.md](file:///home/dominik/.gemini/skills/web-researcher/SKILL.md))
+  * **Fokus:** Zielgerichtete Websuchen und Recherchen zu spezifischen Themen, Fragen, Dokumentationen oder Technologien mit Quellenangaben.
 * **`code-reviewer`** ([SKILL.md](file:///home/dominik/.gemini/skills/code-reviewer/SKILL.md))
   * **Fokus:** Strukturierte Code-Review-Analyse (Security, Performance, Type-Safety, Clean Code) mit nummerierten Berichten in `agents/reviews/` und Fehler-Statusverwaltung.
 * **`skill-creator`** ([SKILL.md](file:///home/dominik/.gemini/skills/skill-creator/SKILL.md))
@@ -186,4 +188,17 @@ Diese Datei enthält die geplante Übersicht und Beschreibungen für nützliche 
   * Prüfung von Querverweisen (`\ref`), geschützten Leerzeichen (`~`) und Zitationen (`\cite`).
   * Aufspüren von LaTeX-Syntaxfehlern (Sonderzeichen `%`, `_`, `&`).
   * Sprachliches Lektorat zur Vermeidung von Umgangssprache und Ich-Form.
+
+---
+
+## 7. Recherche & Websuche
+
+### 🌐 `/web-researcher` (`web-researcher`) — [Erstellt](file:///home/dominik/.gemini/skills/web-researcher/SKILL.md)
+
+* **Ziel:** Zielgerichtete Websuchen und Recherchen zu spezifischen Themen, Fragen, Dokumentationen oder Technologien.
+* **Aufgaben & Workflow:**
+  * Formulierung und Optimierung von Suchanfragen und Suchoperatoren.
+  * Auswertung und Vertiefung über `search_web` und `read_url_content`.
+  * Synthese der Ergebnisse mit exakten Quellenangaben (`[Quelle](URL)`), Zusammenfassungen und Vergleichen.
+
 
