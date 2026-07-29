@@ -33,14 +33,14 @@ Verwende diesen Skill, wenn:
    - **Akzeptanzkriterien:** Definiere messbare Prüfkriterien (z. B. nach dem Given-When-Then / Gegeben-Wenn-Dann Prinzip).
    - **Nicht-Funktionale Anforderungen (NFA):** Performance, Security, Skalierbarkeit, Usability.
 
-4. **Dokumentation & Output im Projekt-Root:**
-   - Speichere die Spezifikation zwingend als eindeutige Markdown-Datei direkt im Projekt-Root (z. B. `REQUIREMENTS.md` für Hauptanforderungen oder `REQUIREMENTS-<feature-name>.md` bei spezifischen Features).
+4. **Dokumentation & Output im Ordner `./agents/`:**
+   - Speichere die Spezifikation zwingend als eindeutige Markdown-Datei im Ordner `./agents/` im Projekt-Root (z. B. `./agents/REQUIREMENTS.md` für Hauptanforderungen oder `./agents/REQUIREMENTS-<feature-name>.md` bei spezifischen Features).
 
 ---
 
 ## Qualitätsregeln
 
-- **Datei-Ablage im Projekt-Root:** Das Ergebnis **muss** immer als eindeutige Markdown-Datei (z. B. `REQUIREMENTS.md` oder `REQUIREMENTS-<feature-name>.md`) im Root-Verzeichnis des Projekts gespeichert werden.
+- **Datei-Ablage im `./agents/`-Ordner:** Das Ergebnis **muss** immer als eindeutige Markdown-Datei (z. B. `./agents/REQUIREMENTS.md` oder `./agents/REQUIREMENTS-<feature-name>.md`) im Ordner `./agents/` des Projekts gespeichert werden.
 - **Präzision & Testbarkeit:** Jedes Akzeptanzkriterium muss eindeutig testbar sein (keine schwammigen Begriffe wie "schnell" oder "benutzerfreundlich" ohne konkrete Messgrößen).
 - **INVEST-Prinzip:** User Stories sollten Unabhängig (Independent), Verhandelbar (Negotiable), Wertvoll (Valuable), Schätzbar (Estimable), Klein (Small) und Testbar (Testable) sein.
 - **KISS & DRY:** Vermeide Über-Spezifikation. Konzentriere dich auf den tatsächlichen fachlichen Nutzen ohne voreilige technische Festlegungen.

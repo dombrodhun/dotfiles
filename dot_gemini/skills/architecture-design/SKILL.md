@@ -1,6 +1,6 @@
 ---
 name: architecture-design
-description: Entwirft und dokumentiert robuste Systemarchitekturen, Modulgrenzen, Schnittstellen (APIs), Datenmodelle und Architecture Decision Records (ADRs) als eindeutiges Markdown im Projekt-Root.
+description: Entwirft und dokumentiert robuste Systemarchitekturen, Modulgrenzen, Schnittstellen (APIs), Datenmodelle und Architecture Decision Records (ADRs) als eindeutiges Markdown im Ordner ./agents/ des Projekts.
 ---
 
 # Architecture Design Skill (`/architecture-design`)
@@ -15,14 +15,14 @@ Verwende diesen Skill, wenn:
 - Modulgrenzen, Datenflüsse und Schnittstellen zwischen Komponenten festgelegt werden müssen.
 - Technische Richtentscheidungen (Architecture Decision Records / ADRs) zu treffen und zu begründen sind.
 - Architekturdiagramme (z. B. C4-Modell, Sequenz- oder ER-Diagramme mit Mermaid) erstellt oder aktualisiert werden sollen.
-- Eine verständliche und nachhaltige Systemdokumentation im Projekt-Root benötigt wird.
+- Eine verständliche und nachhaltige Systemdokumentation im Ordner `./agents/` benötigt wird.
 
 ---
 
 ## Workflow
 
 1. **Kontextanalyse & Ist-Zustand:**
-   - Analysiere fachliche Anforderungen (`REQUIREMENTS.md` oder User-Input) und bestehenden Code/Strukturen im Projekt.
+   - Analysiere fachliche Anforderungen (`./agents/REQUIREMENTS.md` oder User-Input) und bestehenden Code/Strukturen im Projekt.
    - Identifiziere Schlüsselkomponenten, Abhängigkeiten, externe Systeme und Datenflüsse.
 
 2. **Architektur- & Systementwurf:**
@@ -31,14 +31,14 @@ Verwende diesen Skill, wenn:
    - **Architekturentscheidungen (ADRs):** Dokumentiere Kernentscheidungen mit Kontext, Alternativen und Konsequenzen.
    - **Diagramme:** Visualisiere die Architektur mit Mermaid.js (System-Überblick, Sequenzdiagramme, ER-Diagramme).
 
-3. **Dokumentation im Projekt-Root:**
-   - Speichere das Ergebnis zwingend als eindeutige Markdown-Datei direkt im Projekt-Root (z. B. `ARCHITECTURE.md` für Gesamtsysteme oder `ARCHITECTURE-<modul/feature>.md` bei spezifischen Subsystemen).
+3. **Dokumentation im Ordner `./agents/`:**
+   - Speichere das Ergebnis zwingend als eindeutige Markdown-Datei im Ordner `./agents/` im Projekt-Root (z. B. `./agents/ARCHITECTURE.md` für Gesamtsysteme oder `./agents/ARCHITECTURE-<modul/feature>.md` bei spezifischen Subsystemen).
 
 ---
 
 ## Qualitätsregeln
 
-- **Eindeutige Datei im Projekt-Root:** Das Ergebnis **muss** immer als eindeutige Markdown-Datei (z. B. `ARCHITECTURE.md` oder `ARCHITECTURE-<system/feature>.md`) direkt im Root-Verzeichnis des Projekts gespeichert werden.
+- **Eindeutige Datei im `./agents/`-Ordner:** Das Ergebnis **muss** immer als eindeutige Markdown-Datei (z. B. `./agents/ARCHITECTURE.md` oder `./agents/ARCHITECTURE-<system/feature>.md`) im Ordner `./agents/` des Projekts gespeichert werden.
 - **Visualisierung mit Mermaid:** Verwende valide Mermaid.js Code-Blöcke (`mermaid`) für Diagramme (C4 Component, Sequence, ER-Diagramme).
 - **Pragmatismus (KISS & DRY):** Vermeide über-komplizierte Architekturen (YAGNI). Wähle das einfachste Design, das alle funktionalen und nicht-funktionalen Anforderungen erfüllt.
 - **Traceability:** Verknüpfe Architekturkomponenten direkt mit den fachlichen Anforderungen (`REQUIREMENTS.md`) und dem Quellcode im Projekt.
