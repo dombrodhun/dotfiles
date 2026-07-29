@@ -10,6 +10,6 @@ edit = [
 
 [open]
 rules = [
-	{ name = "*.txt", use = "edit" },
+	{ url = "*.txt", use = "edit" },
 	{ mime = "text/*", use = "edit" }
 ]
