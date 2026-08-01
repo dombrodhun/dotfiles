@@ -1,11 +1,11 @@
 ---
 name: code-reviewer
-description: Führt eine strukturierte Code-Review-Analyse bezüglich Security, Performance, Type-Safety und Clean-Code-Prinzipien durch und dokumentiert die Ergebnisse in einer nummerierten Markdown-Datei im Ordner agents/reviews/ inklusive Status-Tracking für gefundene Fehler.
+description: Führt eine strukturierte Code-Review-Analyse bezüglich Security, Performance, Type-Safety und Clean-Code-Prinzipien durch und dokumentiert die Ergebnisse in einer nummerierten Markdown-Datei im Ordner .agents/reviews/ inklusive Status-Tracking für gefundene Fehler.
 ---
 
 # Code Reviewer Skill
 
-Dieser Skill dient der Durchführung strukturierter Code-Reviews und Audits. Alle Ergebnisse werden nachvollziehbar in nummerierten Berichten im Ordner `agents/reviews/` im Projekt-Root abgelegt und ermöglichen das Nachverfolgen des Bearbeitungsstatus gefundener Feststellungen.
+Dieser Skill dient der Durchführung strukturierter Code-Reviews und Audits. Alle Ergebnisse werden nachvollziehbar in nummerierten Berichten im Ordner `.agents/reviews/` im Projekt-Root abgelegt und ermöglichen das Nachverfolgen des Bearbeitungsstatus gefundener Feststellungen.
 
 ## Wann verwenden?
 Verwende diesen Skill, wenn:
@@ -15,9 +15,9 @@ Verwende diesen Skill, wenn:
 ## Workflow
 
 1. **Vorbereitung & Nummernvergabe:**
-   - Prüfe, ob der Ordner `agents/reviews/` im Wurzelverzeichnis des Projekts existiert. Erstelle ihn, falls erforderlich.
-   - Ermittle die bisher höchste Nummer existierender Review-Dateien (z. B. `agents/reviews/001-code-review.md`).
-   - Wähle die nächste dreistellige Sequenznummer (z. B. `001`, `002`, `003`) für den neuen Bericht: `agents/reviews/<NR>-code-review.md` (z. B. `agents/reviews/001-code-review.md`).
+   - Prüfe, ob der Ordner `.agents/reviews/` im Wurzelverzeichnis des Projekts existiert. Erstelle ihn, falls erforderlich.
+   - Ermittle die bisher höchste Nummer existierender Review-Dateien (z. B. `.agents/reviews/001-code-review.md`).
+   - Wähle die nächste dreistellige Sequenznummer (z. B. `001`, `002`, `003`) für den neuen Bericht: `.agents/reviews/<NR>-code-review.md` (z. B. `.agents/reviews/001-code-review.md`).
 
 2. **Datei- & Diff-Inspektion:**
    - Untersuche die relevanten Dateien oder Diffs gründlich mit den Lesen/Grep-Tools.
@@ -27,7 +27,7 @@ Verwende diesen Skill, wenn:
      - **Security & Data:** Validierung von Benutzereingaben, Vermeidung von Injection-Lücken, Sensitive Data Leaks oder unsicherer Fehlerbehandlung.
      - **Architecture & Style:** Einhaltung von KISS-, DRY- und Modularitäts-Prinzipien.
 
-3. **Dokumentation in der Review-Datei (`agents/reviews/<NR>-code-review.md`):**
+3. **Dokumentation in der Review-Datei (`.agents/reviews/<NR>-code-review.md`):**
    Erstelle den Review-Bericht in der ermittelten Nummerierungs-Datei. Verwende folgende Struktur:
 
    ```markdown
@@ -76,4 +76,4 @@ Verwende diesen Skill, wenn:
 
 5. **Ergebnispräsentation:**
    - Informiere den Benutzer kurz über die Erstellung des Berichts.
-   - Verlinke direkt auf die erstellte Datei: `[agents/reviews/<NR>-code-review.md](file:///pfad/zu/agents/reviews/<NR>-code-review.md)`.
+   - Verlinke direkt auf die erstellte Datei: `[.agents/reviews/<NR>-code-review.md](file:///pfad/zu/.agents/reviews/<NR>-code-review.md)`.
