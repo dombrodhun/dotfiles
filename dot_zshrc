@@ -15,6 +15,13 @@ if command -v starship >/dev/null 2>&1; then
     eval "$(starship init zsh)"
 fi
 
+# Zsh Completion System initialisieren
+autoload -U compinit && compinit
+
+# Zsh Autosuggestions Konfiguration (Historie + Tab-Completion Fallback)
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8,bold"
+
 # Zsh Plugins laden (falls vorhanden)
 [ -f ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -28,4 +35,3 @@ fi
 if command -v mise >/dev/null 2>&1; then
     eval "$(mise activate zsh)"
 fi
-
