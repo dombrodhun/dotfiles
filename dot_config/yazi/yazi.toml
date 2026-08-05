@@ -4,7 +4,21 @@ show_hidden = false
 show_symlink = true
 
 [opener]
-edit = [{ run = '${EDITOR:-vi} "$@"', block = true, for = "unix" }]
+edit = [
+    { run = '${EDITOR:-vi} "$@"', block = true, for = "unix" },
+]
+open = [
+    { run = 'xdg-open "$1"', desc = "Open", orphan = true, for = "linux" },
+]
+pdf = [
+    { run = 'papers "$1"', desc = "GNOME Papers", orphan = true, for = "linux" },
+    { run = 'xdg-open "$1"', desc = "System Default", orphan = true, for = "linux" },
+]
 
 [open]
-rules = [{ url = "*.txt", use = "edit" }, { mime = "text/*", use = "edit" }]
+rules = [
+    { mime = "application/pdf", use = [ "pdf", "open" ] },
+    { url = "*.pdf", use = [ "pdf", "open" ] },
+    { mime = "text/*", use = "edit" },
+    { url = "*", use = [ "open", "edit" ] },
+]
