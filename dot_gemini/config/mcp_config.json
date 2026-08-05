@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "google-workspace": {
+      "command": "/home/dominik/.local/share/mise/installs/uv/0.12.1/uv-x86_64-unknown-linux-musl/uvx",
+      "args": [
+        "workspace-mcp"
+      ],
+      "env": {
+        "CREDENTIALS_PATH": "/home/dominik/.config/google-workspace-mcp/credentials.json"
+      }
+    }
+  }
+}
